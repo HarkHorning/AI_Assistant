@@ -1,2 +1,2 @@
 # AI_Assistant
-Simple Gemini api connection. Will do more with this.
+Simple Gemini interactive api connection with flask. Will do more with this later.
