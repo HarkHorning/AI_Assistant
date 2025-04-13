@@ -1,2 +1,2 @@
 # AI_Assistant
-Simple AI Assistant.
+Simple Gemini api connection. Will do more with this.
