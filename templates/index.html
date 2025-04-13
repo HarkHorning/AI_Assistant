@@ -7,8 +7,11 @@
 </head>
 <body>
     <h1>Ask Gemini</h1>
-    <form action="" method="post">
-        <input type="text" name="" id="" placeholder="Your question for Gemini...">
+    <form action="/ask" method="POST">
+        <input type="text" name="ask" id="" placeholder="Your question for Gemini...">
+        <input type="submit" value="ask">
     </form>
+    <h2>Gemini says:</h2>
+    <p>{{answer}}</p>
 </body>
 </html>
