@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='style.css') }}">
+    <title>Ask Gemini</title>
 </head>
 <body>
-    <h1>Ask Gemini</h1>
-    <form action="/ask" method="POST">
-        <input type="text" name="ask" id="" placeholder="Your question for Gemini...">
-        <input type="submit" value="ask">
-    </form>
-    <h2>Gemini says:</h2>
-    <p>{{answer}}</p>
+    <nav class="nav_bar">
+        <a href="/" class="title">Ask Gemini</a>
+    </nav>
+    <section class="main_section">
+        <form action="/ask" method="POST">
+            <input type="text" name="ask" id="" placeholder="Your question for Gemini..." class="input_style">
+            <input type="submit" value="ask" class="input_style">
+        </form>
+        <div class="response_div">
+            <h2 class="gemini_says">Gemini says:</h2>
+            <p class="gemini_response">{{answer}}</p>
+        </div>
+    </section>
 </body>
 </html>

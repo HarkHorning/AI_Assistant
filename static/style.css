@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+:root {
+    --background: #1F1C1C;
+    --text_main: white;
+}
+body {
+    background-color: var(--background);
+    color: var(--text_main);
+    font-family: 'Work Sans';
+    font-size: 22px;
+    font-weight: 900;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav_bar {
+    padding: 2rem;
+}
+.title {
+    font-size: 2rem;
+}
+.main_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.input_style {
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    border: 3px solid var(--text_main);
+    background-color: transparent;
+    color: var(--text_main);
+}
+.gemini_says {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.gemini_response {
+    font-size: 1rem;
+    font-weight: 100;
+}
