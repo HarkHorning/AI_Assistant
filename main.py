@@ -7,8 +7,14 @@ app = Flask(__name__)
 
 # clean and process gemini responses
 def clean(gemini_response):
-    return jsonify(**gemini_response)
+    try: 
+        return jsonify(**gemini_response)
+    except Exception as err:
+        print("cleaning went badly:", err)
+        return gemini_response
 
+
+# Routes
 
 @app.route("/")
 def index():
