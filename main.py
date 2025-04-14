@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, url_for, request, jsonify
 import asyncio
 from connect_genai import response
 
@@ -12,7 +12,8 @@ def index():
 @app.route("/ask", methods=['POST'])
 def post():
     ask = request.form.get('ask')
-    answer = asyncio.run(response(ask))
+    gemini_response = asyncio.run(response(ask))
+    answer = jsonify(**gemini_response)
     return render_template('index.html', answer=answer)
 
 
