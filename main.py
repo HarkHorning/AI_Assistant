@@ -2,6 +2,7 @@ from flask import Flask, render_template, url_for, request, jsonify
 import asyncio
 from connect_genai import response
 
+
 app = Flask(__name__)
 
 
@@ -12,6 +13,10 @@ def clean(gemini_response):
     except Exception as err:
         print("cleaning went badly:", err)
         return gemini_response
+    
+    # data = response.json()
+    # return data['candidates'][0]['content']['parts'][0]['text']
+
 
 
 # Routes
