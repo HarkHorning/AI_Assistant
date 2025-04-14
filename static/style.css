@@ -14,6 +14,8 @@ body {
     font-size: 22px;
     font-weight: 900;
     gap: 1rem;
+}
+.col {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,9 +27,6 @@ body {
     font-size: 2rem;
 }
 .main_section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 2rem;
 }
 .input_style {
