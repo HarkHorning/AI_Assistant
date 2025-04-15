@@ -3,6 +3,8 @@ Simple Gemini interactive api connection with flask. Will do more with this late
 
 ## Tasks
 
-Find a way to parse responses to make them more human readable
+Share data with Gemini API to give greater conversation context.
 
-have context beyond each question by storing previous conversations
+Find a way to parse responses to make them more human readable.
+
+have context beyond each question by storing previous conversations.
