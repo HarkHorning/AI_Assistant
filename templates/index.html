@@ -17,5 +17,9 @@
                 {{ data|safe }}
             {% endfor %}
         </ul>
+        <form action="/ask" method="POST" style="width: full;">
+            <input type="text" name="ask" id="" placeholder="Your question for Gemini..." class="input_style">
+            <input type="submit" value="ask" class="input_style submit_btn"></form>
+    </section>
 </body>
 </html>

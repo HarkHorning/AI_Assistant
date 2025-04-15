@@ -13,8 +13,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    answer = ""
-    return render_template("index.html", answer=answer)
+    answer = ["..."]
+    return render_template("index.html", data=answer)
 
 
 @app.route("/ask", methods=['POST'])
