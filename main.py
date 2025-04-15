@@ -21,11 +21,10 @@ def post():
     ask = request.form.get('ask')
     gemini_response = asyncio.run(response(ask))
     answer = format_gemini_response(gemini_response)
-    # answer = "Here is info<br><br>Here is some more"
-    return render_template('index.html', answer=answer)
+    return render_template('index.html', ask=ask, answer=answer)
 
 
-@app.route("/exp", methods=['POST'])
+@app.route("/exp", methods=['POST']) # Route for testing things.
 def experiment():
     answer = "Here is info<br><br>Here is some more"
     return render_template("index.html", answer=answer)

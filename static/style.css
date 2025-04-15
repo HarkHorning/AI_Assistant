@@ -32,10 +32,11 @@ body {
     color: var(--text_main);
 }
 .gemini_says {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 400;
 }
 .gemini_response {
+    gap: 1rem;
     font-size: 1rem;
     font-weight: 100;
 }
