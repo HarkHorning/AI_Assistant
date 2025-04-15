@@ -1,21 +1,10 @@
 from flask import Flask, render_template, url_for, request, jsonify
 import asyncio
 from connect_genai import response
+from formatting import format_gemini_response
 
 
 app = Flask(__name__)
-
-
-# clean and process gemini responses
-def clean(gemini_response):
-    try: 
-        return jsonify(**gemini_response)
-    except Exception as err:
-        print("cleaning went badly:", err)
-        return gemini_response
-    
-    # data = response.json()
-    # return data['candidates'][0]['content']['parts'][0]['text']
 
 
 
@@ -31,8 +20,15 @@ def index():
 def post():
     ask = request.form.get('ask')
     gemini_response = asyncio.run(response(ask))
-    answer = clean(gemini_response)
+    answer = format_gemini_response(gemini_response)
+    # answer = "Here is info<br><br>Here is some more"
     return render_template('index.html', answer=answer)
+
+
+@app.route("/exp", methods=['POST'])
+def experiment():
+    answer = "Here is info<br><br>Here is some more"
+    return render_template("index.html", answer=answer)
 
 
 app.run(host="127.0.0.1", port=3000)

@@ -16,6 +16,12 @@
             <input type="submit" value="ask" class="input_style"></form>
         <div class="response_div">
             <h2 class="gemini_says">Gemini says:</h2>
-            <p class="gemini_response">{{answer}}</p></div></section>
+            <pre class="gemini_response" id="response">{{answer|safe}}</pre></div></section>
+    <script>
+        const jsonBreak = document.getElementById("response").innerHTML
+        const newLine = jsonBreak.replace('<br>', '\n')
+
+        console.log(jsonBreak)
+    </script>
 </body>
 </html>
