@@ -13,10 +13,10 @@
     <section class="main_section col" style="width: 800px;">
         <div class="response_div">
             <p class="gemini_response" id="response">{{answer|safe}}</p></div>
-            <p class="gemini_response" id="response">{{ask|safe}}</p></div>
+            <p class="gemini_response" id="response">{{Ask|safe}}</p></div>
         <form action="/ask" method="POST" style="width: full;">
             <input type="text" name="ask" id="" placeholder="Your question for Gemini..." class="input_style">
-            <input type="submit" value="ask" class="input_style"></form></section>
+            <input type="submit" value="ask" class="input_style submit_btn"></form></section>
     <script>
         const jsonBreak = document.getElementById("response").innerHTML
         const newLine = jsonBreak.replace('<br>', '\n')

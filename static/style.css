@@ -6,7 +6,8 @@
 :root {
     --background: #1F1C1C;
     --text_main: white;
-    --sec_text: rgba(255, 255, 255, 0.5);
+    --sec_text: rgba(255, 255, 255, 0.25);
+    --color_second: rgba(255, 166, 0, 0.75);
 }
 body {
     background-color: var(--background);
@@ -22,7 +23,10 @@ body {
     align-items: center;
 }
 .nav_bar {padding: 2rem;}
-.title {font-size: 2rem;}
+.title {
+    font-size: 2rem;
+    color: var(--color_second);
+}
 .main_section {
     gap: 2rem;
     border: 2px solid var(--sec_text);
@@ -36,9 +40,13 @@ body {
     border: 3px solid var(--text_main);
     background-color: transparent;
     color: var(--text_main);
+    font-weight: 600;
 }
 .response_div {
     height: 50vh;
+    overflow-y: auto;
+    scrollbar-color: var(--color_second) var(--background);
+    scrollbar-width: thin;
 }
 .gemini_says {
     font-size: 1.25rem;
@@ -48,4 +56,9 @@ body {
     gap: 1rem;
     font-size: 1rem;
     font-weight: 100;
+}
+.submit_btn { 
+    background-color: var(--color_second); 
+    border-color: var(--color_second);
+    color: var(--background);
 }
