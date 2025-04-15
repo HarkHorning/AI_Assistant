@@ -6,6 +6,7 @@
 :root {
     --background: #1F1C1C;
     --text_main: white;
+    --sec_text: rgba(255, 255, 255, 0.5);
 }
 body {
     background-color: var(--background);
@@ -22,7 +23,12 @@ body {
 }
 .nav_bar {padding: 2rem;}
 .title {font-size: 2rem;}
-.main_section {gap: 2rem;}
+.main_section {
+    gap: 2rem;
+    border: 2px solid var(--sec_text);
+    border-radius: 8px;
+    padding: 2rem;
+}
 .input_style {
     font-size: 1rem;
     padding: 1rem 1.25rem;
@@ -30,6 +36,9 @@ body {
     border: 3px solid var(--text_main);
     background-color: transparent;
     color: var(--text_main);
+}
+.response_div {
+    height: 50vh;
 }
 .gemini_says {
     font-size: 1.25rem;
