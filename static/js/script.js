@@ -1,9 +1,15 @@
 
-// const information = json.parse("{{ ask }}")
-// console.log(information)
 
-clicker = document.getElementById('submit')
+// function listChat() {
+//   display.innerHTML = display.innerHTML[0]
+// }
 
-clicker.addEventListener('click', function() {
+// display = document.getElementById('response')
 
-  });
+// console.log(display.innerHTML)
+
+// if (display.innerHTML.length > 0) {listChat(display)}
+
+// display.addEventListener('change', function() {
+//     alert("Changed")
+// });
